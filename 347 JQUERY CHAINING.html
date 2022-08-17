@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#p1").css("color", "purple").slideUp(2000).slideDown(2000);
+    $("#p2").css("color", "blue").slideUp(2000);
+  });
+});
+</script>
+</head>
+<body>
+
+<p id="p1">jQuery is fun!!</p>
+<p id="p2">jQuery is library languagae...</p>
+<button>Click me</button>
+<button>Press me</button>
+</body>
+</html>

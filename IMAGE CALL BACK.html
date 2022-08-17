@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image callback function</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        jQuery(Selection).ready(function(){
+            jQuery("button").click(function(){
+               $("img").hide(function(){
+                   alert("this is pic hide");
+               });
+           });
+       });
+       </script>
+</head>
+<body>
+    <p>This is pic hidden</p>
+    <img src="https://media.istockphoto.com/photos/abstract-colorful-scratched-film-background-picture-id1327080265?s=612x612" alt="">
+    <br><br>
+    <button>hide</button>
+</body>
+</html>

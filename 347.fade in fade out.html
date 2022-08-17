@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Jquery CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $("#t1").fadeOut("slow" , function(){
+                    $("#t2").fadeIn("slow", function(){
+                        $("#b1").click(function(){
+                            $("#t2").fadeOut("slow", function(){
+                                $("#t3").fadeIn("slow", function(){
+                                    alert("Image slide is over now refresh the page or move to next content");
+                                    $("#b1").attr("disabled",true);
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    </script>
+    <style>
+        #b1{
+            margin: 8px;
+        }
+        #t1 {
+            height: 170px;
+            width: 130px;
+        }
+        #t2 {
+            height: 170px;
+            width: 130px;
+            display: none;
+        }
+        #t3 {
+            height: 170px;
+            width: 130px;
+            display: none;
+        }
+    </style>
+    <title>
+        fadeIn and fadeOut
+    </title>
+</head>
+<body>
+    <button type="button" id="b1" class="btn btn-outline-warning">Start</button>
+    <br>
+    <img src="C:\Users\student\Desktop\347 J.S\image\6cb1f2fa678c652bb5a440e5812d874d.jpg">
+    <img src="C:\Users\student\Desktop\347 J.S\image\bdabf34b49cbf89e6b0bd03560fa7bc2.jpg">
+    <img src="C:\Users\student\Desktop\347 J.S\image\Nice-Cristiano-Ronaldo.webp">
+    
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
